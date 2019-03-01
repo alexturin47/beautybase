@@ -840,7 +840,6 @@ footer p {
 }
 
 .inside__header__account .account__list {
-  display: none;
   position: absolute;
   top: calc(100% + 15px);
   left: 0;
@@ -848,6 +847,7 @@ footer p {
   background: #fff;
   -webkit-box-shadow: 0 12px 27px rgba(0, 0, 0, 0.11);
           box-shadow: 0 12px 27px rgba(0, 0, 0, 0.11);
+  z-index: 90;
 }
 
 .inside__header__account .account__list ul {
