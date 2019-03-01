@@ -1,0 +1,314 @@
+//body
+  //position: relative
+  //display: flex
+  //min-height: 100vh
+  //flex-direction: column
+
+#app
+  position: relative
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+main
+  position: relative
+  background: rgba(#000000, 0.2) url('../img/index/main_bg.jpg') no-repeat
+  background-blend-mode: overlay
+  background-size: cover
+  transition: all 0.4s
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+header
+  padding-top: 24px
+  padding-bottom: 24px
+
+.header
+  justify-content: space-between
+  align-items: center
+  &__logo
+    display: block
+    margin-left: 64px
+  &__nav
+    margin-right: 90px
+    li
+      margin-left: 30px
+      a
+        color: $main
+        font-family: "Oswald-SemiBold"
+        font-size: 17px
+        font-weight: 400
+        text-transform: uppercase
+        text-decoration: none
+        transition: all 0.2s
+        &:hover
+          color: #ff80b2
+
+.main
+  padding-bottom: 70px
+  &__container
+    justify-content: space-between
+.login
+  position: relative
+  height: calc(387px + 55px)
+  margin-left: 90px
+  &__form
+    position: relative
+    max-width: 321px
+    height: 367px
+    padding: 60px 24px
+    box-shadow: 0 2px 46px rgba(46, 50, 58, 0.13)
+    background-color: #ffffff
+    z-index: 1
+    &-input
+      width: 100%
+      padding: 13px 0 11px 30px
+      box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.13)
+      border: 1px solid rgba(#596472, 0.25)
+      color: $main
+      font-family: 'Oswald'
+      font-size: 15px
+      text-transform: uppercase
+      &:first-child
+        margin-bottom: 10px
+    &-recovery
+      display: block
+      text-align: center
+      color: $main
+      font-family: "Oswald-ExtraLight"
+      &:hover
+        color: $activ
+    .forms__label
+      text-align: left 
+    .btn-form
+      display: block
+      margin:  19px auto 25px
+
+
+
+  &__shadow
+    position: absolute
+    top: 55px
+    left: 22px
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 321px
+    height: 387px
+    padding-bottom: 16px
+    box-shadow: 0 2px 46px rgba(46, 50, 58, 0.13)
+    background-color: rgba($main, 0.7)
+    //opacity: 0.59
+    &-reglink
+      display: block
+      margin-top: auto
+      color: #fefefe
+      font-family: 'Oswald'
+      font-size: 15px
+      text-transform: uppercase
+      &:hover
+        color: $activ
+    p
+      margin: 0
+      color: #ffffff
+      font-family: "Oswald-ExtraLight"
+      font-size: 15px
+      
+.offer
+  max-width: 350px
+  margin-right: 150px
+  padding-top: 73px
+  padding-left: 20px
+  &__title
+    margin: 0
+    color: #3a3c4d
+    font-family: "Oswald-SemiBold"
+    font-size: 49px
+    line-height: 58px
+    text-transform: uppercase
+  &__subtitle
+    margin-top: 32px
+    opacity: 0.58
+    color: #3a3c4d
+    font-family: 'Oswald'
+    font-size: 21px
+    line-height: 24px
+  &__btn
+    display: inline-block
+    margin-top: 38px
+    font-size: 17px
+  &__nav
+    margin-top: 120px
+    margin-left: 35px
+    ul
+      display: flex
+      list-style: none
+      margin: 0
+      padding: 0
+      li
+        margin-right: 70px
+        a
+          color: #ffffff
+          font-family: 'Oswald'
+          font-size: 21px
+        &:hover
+          a
+            color: $activ
+
+footer
+  padding-top: 50px
+  padding-bottom: 40px
+  background-color: rgba(#596472, 0.5)
+  margin-top: auto
+  p
+    margin-top: 0
+    margin-bottom: 0
+
+.footer
+  justify-content: center
+  padding-left: 40px
+  padding-right: 40px
+  color: #ffffff
+  &__block
+    flex-basis: calc((70% / 3) - 50px)
+    flex-grow: 1
+    flex-shrink: 0
+    margin-left: 50px
+    //opacity: 0.6
+    &:first-child
+      margin-left: 0
+      flex-basis: calc(30% - 50px)    
+  &__copyright
+    color: #ffffff
+    font-family: "Oswald-ExtraLight"
+    font-size: 17px
+  &__regaddress
+    margin-top: 11px
+    color: #ffffff
+    font-family: 'Oswald'
+    font-size: 12px
+    font-weight: 300
+    line-height: 11.2px
+  &__social
+    margin-left: -17px
+    margin-top: 25px
+    li
+      margin-left: 17px
+    .social__icon
+      display: block
+      width: 42px
+      height: 42px
+      border-radius: 42px
+      border: 1px solid #ffffff
+      text-align: center
+      line-height: 52px
+      svg
+        width: 24px
+        height: 24px
+        fill: #ffffff
+      &:hover
+        border: 1px solid $activ
+        svg
+          fill: $activ
+  &__links
+    color: #ffffff
+    a
+      color: #ffffff    
+      font-family: 'Oswald'
+      font-size: 21px
+      &:hover
+        //color: darken($activ, 10%)
+        color: $activ
+    p
+      font-family: "Oswald-ExtraLight"
+      font-size: 17px
+  &__contact
+    color: #ffffff
+    font-family: 'Oswald'
+    a
+      color: inherit
+      display: block
+      margin-left: 45px
+      margin-top: 6px
+      text-decoration: none
+      &:hover
+        //color: darken($activ, 10%)
+        color: $activ
+    &-title  
+      font-size: 21px
+      display: flex
+      align-items: center
+      span
+        display: inline-block
+      svg
+        width: 28px
+        height: 28px
+        fill: #ffffff
+        margin-right: 14px
+
+.overlay__reg
+  //display: none
+  width: 100%
+  height: 100vh
+  position: fixed
+  z-index: 100
+  transition: all 0.4s
+  &-bg
+    position: absolute
+    top: -20px
+    left: 0
+    width: 100%
+    height: 110%
+    background: rgba(#ffffff, 0.8)
+  .container
+    min-height: 100vh
+.forms
+  position: relative
+  margin: auto
+  width: 444px
+  padding: 40px 70px
+  box-shadow: 0 2px 46px rgba(46, 50, 58, 0.11)
+  background-color: #ffffff
+  &__title
+    color: $main
+    font-family: 'Oswald'
+    font-size: 21px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 15px
+  &__close
+    position: absolute
+    top: 18px
+    right: 20px
+    width: 16px
+    svg
+      width: 16px
+      height: 16px
+      fill: #000000
+    &:hover
+      cursor: pointer
+      svg
+        fill: $activ
+
+.reg__form
+  //display: none
+  position: relative
+  &-text
+    color: $main
+    font-family: "Oswald-ExtraLight"
+    font-size: 14px
+    line-height: 23.04px   
+  button
+    margin: 40px auto 0
+    display: block
+  &-login
+    margin-top: 14px
+    color: $main
+    font-family: 'Oswald'
+    font-size: 14px
+    font-weight: 300
+    text-align: center
+
+  
+
+
