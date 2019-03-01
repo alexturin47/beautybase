@@ -905,7 +905,6 @@ footer p {
 }
 
 .inside__header__account .account__list {
-  display: none;
   position: absolute;
   top: -moz-calc(100% + 15px);
   top: calc(100% + 15px);
