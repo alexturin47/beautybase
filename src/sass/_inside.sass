@@ -66,10 +66,14 @@
             height: 15px
             fill: $main
             transform: rotate(-90deg)
+            transition: all 0.3s
           &:hover
             cursor: pointer
             svg
               fill: $activ
+          &.is-open
+            svg
+              transform: rotate(90deg)
         &__list
           //display: none
           position: absolute
@@ -79,6 +83,7 @@
           background: #fff
           box-shadow: 0 12px 27px rgba(0, 0, 0, 0.11)
           z-index: 90
+          transition: all 0.3s
           ul
             margin: 0
             padding: 34px 0 23px 30px
@@ -102,6 +107,7 @@
             height: 20px
             fill: $main
             vertical-align: bottom
+
 
 .filter-bar
   padding-top: 40px
