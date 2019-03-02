@@ -311,7 +311,7 @@
                 </svg></div>
               <div class="filters__input input-date">
                 <input type="text" placeholder="28 февраля 2019" id="inputCal">
-                <div class="filters__input-img" id="calBtn"><svg>
+                <div class="filters__input-img" id="calBtn" onClick="xCal('inputCal');"><svg>
                     <use xlink:href="#calendar"></use>
                   </svg></div>
               </div>
@@ -321,7 +321,7 @@
             </div>
           </div>
 
-          <div class="filters__block block-time_from">
+          <div class="filters__block block-time_from"  style="display: none;">
             <div class="filters__block-title">Время С</div>
             <div class="filters__block-control">
               <div class="filters__input input-time">
@@ -332,7 +332,7 @@
               </div>
             </div>
           </div>
-          <div class="filters__block block-time_to">
+          <div class="filters__block block-time_to"  style="display: none;">
             <div class="filters__block-title">Время По</div>
             <div class="filters__block-control">
               <div class="filters__input input-time">
@@ -343,7 +343,7 @@
               </div>
             </div>
           </div>
-          <div class="filters__block block-time_period">
+          <div class="filters__block block-time_period"  style="display: none;">
             <div class="filters__block-title">Период</div>
             <div class="filters__block-control">
               <div class="filters__input input-period">
@@ -401,7 +401,7 @@
               <div class="shedule-cards__card" data-height="" style="height: 117px;">
                 <div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara"></div>
                 <div class="card__text">
-                  <div class="card__time activ-time">8:00 - 9:30</div>
+                  <div class="card__time activ-time">8:00 - 9:00</div>
                   <div class="card__client">Елена Иванова <span>+ 7 495 123 456 34</span></div>
                   <div class="card__service">Стрижка</div>
                 </div>
@@ -431,7 +431,7 @@
               <div class="shedule-cards__card" data-height="" style="height: 117px;">
                 <div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara" style="display:none;"></div>
                 <div class="card__text">
-                  <div class="card__time activ-time">8:00 - 9:30</div>
+                  <div class="card__time activ-time">9:00 - 10:30</div>
                   <div class="card__client" style="display:none;">Елена Иванова <span>+ 7 495 123 456 34</span></div>
                   <div class="card__service">Свободно</div>
                 </div>
@@ -459,12 +459,43 @@
 
               </div>
 
+              <div class="shedule-cards__card" data-height="" style="height: 78px;">
+                <div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara" style="display:none;"></div>
+                <div class="card__text">
+                  <div class="card__time activ-time">10:30 - 11:30</div>
+                  <div class="card__client" style="display:none;">Елена Иванова <span>+ 7 495 123 456 34</span></div>
+                  <div class="card__service">Перерыв</div>
+                </div>
+                <div class="card__price">
+                  <span style="display:none;">4500p.</span>
+                  <div class="card__check" style="display:none;">
+                    <input type="checkbox">
+                    <label>Горящее место</label>
+                  </div>
+                </div>
+                <div class="card__buttons">
+                  <div class="buttons__block" style="display:none;">
+                    <div><svg>
+                        <use xlink:href="#call"></use>
+                      </svg></div>
+                    <div><svg>
+                        <use xlink:href="#pencil"></use>
+                      </svg></div>
+                    <div><svg>
+                        <use xlink:href="#close"></use>
+                      </svg></div>
+                  </div>
+                  <input type="button" value="Записать" class="card__btn" style="display:none;">
+                </div>
+
+              </div>        
+
               <div class="shedule-cards__card" data-height="" style="height: 156px;">
                 <div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara"></div>
                 <div class="card__text">
-                  <div class="card__time activ-time">8:00 - 9:30</div>
+                  <div class="card__time activ-time">11:30 - 13:30</div>
                   <div class="card__client">Елена Иванова <span>+ 7 495 123 456 34</span></div>
-                  <div class="card__service">Стрижка</div>
+                  <div class="card__service">Укладка</div>
                 </div>
                 <div class="card__price">
                   <span>4500p.</span>
@@ -492,7 +523,7 @@
               <div class="shedule-cards__card" data-height="" style="height: 195px;">
                 <div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara"></div>
                 <div class="card__text">
-                  <div class="card__time activ-time">8:00 - 9:30</div>
+                  <div class="card__time activ-time">13:30 - 16:00</div>
                   <div class="card__client">Елена Иванова <span>+ 7 495 123 456 34</span></div>
                   <div class="card__service">Стрижка</div>
                 </div>
@@ -522,7 +553,7 @@
               <div class="shedule-cards__card" data-height="" style="height: 117px;">
                 <div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara" style="display:none;"></div>
                 <div class="card__text">
-                  <div class="card__time activ-time">8:00 - 9:30</div>
+                  <div class="card__time activ-time">16:00 - 17:30</div>
                   <div class="card__client" style="display:none;">Елена Иванова <span>+ 7 495 123 456 34</span></div>
                   <div class="card__service">Свободно</div>
                 </div>
@@ -630,15 +661,7 @@
       //
 
 
-    //
-    // КАЛЕНДАРЬ
-    //
-    let calBtn = document.getElementById('calBtn');
-    let inputCal = document.getElementById('inputCal');
-    calBtn.addEventListener('click', () => {
-        xCal('inputCal');
-    }) 
-
+    
 
 
 

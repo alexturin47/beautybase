@@ -44,6 +44,10 @@ a:active, a:focus {
   outline: none;
 }
 
+input, textarea, select {
+  outline: none !important;
+}
+
 button:active, button:focus {
   outline: none;
 }
@@ -962,8 +966,11 @@ footer p {
 }
 
 .filter-bar .container {
-  padding-left: 156px;
-  padding-right: 195px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .filters {
@@ -972,8 +979,6 @@ footer p {
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  width: 800px;
-  margin-left: auto;
 }
 
 .filters__block {
@@ -1062,6 +1067,11 @@ footer p {
   opacity: 1;
 }
 
+.filters__input.input-date input {
+  width: 200px;
+  text-align: center;
+}
+
 .filters__input select {
   position: relative;
   height: 44px;
@@ -1109,7 +1119,7 @@ footer p {
           box-shadow: 0 3px 8px rgba(54, 55, 63, 0.18);
   background-color: #ffffff;
   text-align: center;
-  line-height: 48px;
+  line-height: 44px;
 }
 
 .filters__btn:hover {
@@ -1123,8 +1133,8 @@ footer p {
 }
 
 .filters__btn svg {
-  width: 11px;
-  height: 20px;
+  width: 12px;
+  height: 12px;
   fill: #656b72;
 }
 
@@ -1173,8 +1183,7 @@ footer p {
 
 .sidebar ul li:hover {
   cursor: pointer;
-  background-color: rgba(255, 128, 177, 0.15);
-  border-left: 4px solid #ff80b1;
+  background-color: rgba(255, 128, 177, 0.07);
 }
 
 .sidebar-active {
@@ -1210,7 +1219,7 @@ footer p {
 .timeline ul li {
   padding-top: 27px;
   padding-bottom: 27px;
-  border-bottom: 2px solid #656b72;
+  border-bottom: 2px solid #cfd1d4;
   color: #656b72;
   font-family: 'Oswald';
   font-size: 15px;
@@ -1234,7 +1243,7 @@ footer p {
      -moz-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 2px solid #656b72;
+  border-bottom: 2px solid #cfd1d4;
 }
 
 .card__img {

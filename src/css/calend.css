@@ -7,7 +7,9 @@ font-size: 15px;
 text-align: center;
 background: #fff;
 border: 2px solid #ddd;
+border-radius: 22px;
 padding: 5px;
+font-family: 'Oswald';
 }
 .xcalend td {
 cursor: pointer;
@@ -23,7 +25,7 @@ color: #555;
 cursor: default;
 }
 .xcalend tbody td {
-color: #025;
+color: #656b72;
 }
 .xcalend tfoot td {
 color: #333;
@@ -33,18 +35,18 @@ background: #eee;
 font-weight: bold;
 }
 .xcalend tbody td:hover, .xcalend td:hover {
-background: #025;
-color: #acf;
+background: #fabfd7;
+color: #656b72;
 }
 .xcalend tbody td:nth-child(n+6) {
-color: #e78c5c;
+color: #ff80b2;
 }
 .xcalend .cal-first td:nth-last-child(-n+2) {
-color: #e78c5c;
+color: #ff80b2;
 }
 .xcalend tbody td.today {
-background: #d00;
-color: #fff;
+background: #ff80b2;
+color: #fff !important; 
 font-weight: bold;
 }
 .xcalend tbody td.bold {
