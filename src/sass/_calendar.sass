@@ -1,0 +1,146 @@
+.schedule
+  display: flex
+  flex-direction: column
+  width: 800px
+  padding: 50px 16px 30px 16px
+  margin-bottom: 160px
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.11)
+  border-radius: 0 0 9px 9px
+  background-color: #ffffff
+  &__title
+    display: flex
+    margin: 0 auto
+    align-items: center
+    h2
+      margin-top: 0
+      margin-bottom: 0
+      color: $main
+      font-size: 21px
+      font-weight: 700
+      padding-left: 20px
+      padding-right: 20px
+.month
+  &-place
+  &__employ
+    margin: 0 auto
+    text-align: center
+    opacity: 0.66
+    color: $main
+    font-size: 18px
+  &__day-title
+    display: flex
+    list-style: none
+    padding: 28px 0 25px 
+    margin: 0
+    li
+      flex-basis: calc(100%/7)
+      text-align: center
+      color: $main
+      font-size: 18px
+      font-weight: 700
+      &:last-child, &:nth-child(6)
+        color: $activ 
+  &__schedule
+      display: flex
+      margin-left: -6px
+      justify-content: flex-start
+      align-items: flex-start
+      flex-wrap: wrap
+.day
+  position: relative
+  flex-basis: calc(100% / 7 - 6px)
+  text-align: center
+  margin-left: 6px
+  margin-bottom: 11px
+  padding: 10px 12px
+  border-radius: 22px
+  border: 1px solid #ebebeb
+  color: rgba($main, 0.7)
+  &:hover
+    cursor: pointer
+  &__num
+    font-size: 22px
+    font-weight: 700
+    line-height: 22px
+  &__name
+    font-size: 12px
+    font-weight: 500
+    margin-bottom: 9px
+  &__progress
+    position: relative
+    overflow: hidden
+    margin-bottom: 5px
+    progress
+      position: absolute
+      width: 0
+      height: 0
+      overflow: hidden
+    .progress-bar
+      overflow: hidden
+      background: $activ
+      width: 0
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+    &-bg
+      background: rgba(#596472, 0.17)
+      position: relative
+      height: 4px
+      border-radius: 4px
+      overflow: hidden
+
+  &__free
+    font-size: 12px
+    opacity: 0.67
+  &-full
+    position: relative
+    &:before
+      position: absolute
+      content: 'Full'
+      top: -7px
+      right: -11px
+      width: 45px
+      height: 26px
+      box-shadow: 0 -3px 16px rgba(224, 60, 123, 0.2)
+      border-radius: 13px
+      background-color: #e03c7b
+      color: #ffffff
+      font-size: 13px
+      font-weight: 500
+      line-height: 26px
+
+@for $i from 0 through 100
+  .day__progress progress[value="#{$i}"]
+    & ~ .day__progress-bg .progress-bar
+      width: $i * 1%
+
+
+.fill-emlpoy-0
+  background-color: #ffffff
+.fill-emlpoy-10
+  background-color: rgba($activ, 0.1)
+.fill-emlpoy-20
+  background-color: rgba($activ, 0.2)
+.fill-emlpoy-30
+  background-color: rgba($activ, 0.3)
+.fill-emlpoy-40
+  background-color: rgba($activ, 0.4)
+.fill-emlpoy-50
+  background-color: rgba($activ, 0.5)
+
+.fill-emlpoy-60
+  background-color: rgba($activ, 0.6)
+  color: #ffffff
+.fill-emlpoy-70
+  background-color: rgba($activ, 0.7)
+  color: #ffffff
+.fill-emlpoy-80
+  background-color: rgba($activ, 0.8)
+  color: #ffffff
+.fill-emlpoy-90
+  background-color: rgba($activ, 0.9)
+  color: #ffffff
+.fill-emlpoy-100
+  background-color: $activ
+  color: #ffffff
