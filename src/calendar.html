@@ -319,7 +319,21 @@
         <div class="container">
           <div class="filters">
 
-            <div class="filters__block block-date">
+           <div class="filters__block filter-month">
+               <div class="filter-title">
+                <div class="filters__btn arrow-left"><svg>
+                    <use xlink:href="#left"></use>
+                  </svg>
+                </div>
+                <h2>Март 2019</h2>
+                <div class="filters__btn arrow-right"><svg>
+                    <use xlink:href="#left"></use>
+                  </svg>
+                </div>
+              </div>
+           </div>     
+
+            <div class="filters__block block-date" style="display: none;">
               <div class="filters__block-title">Дата</div>
 
               <app-calendar></app-calendar>
@@ -404,20 +418,8 @@
 
             <!-- блок расписание -->
             <div class="schedule">
-              <div class="schedule__title">
-                <div class="filters__btn arrow-left"><svg>
-                    <use xlink:href="#left"></use>
-                  </svg>
-                </div>
-                <h2>Март 2019</h2>
-                <div class="filters__btn arrow-right"><svg>
-                    <use xlink:href="#left"></use>
-                  </svg>
-                </div>
-              </div>
 
               <div class="month-place">
-                <div class="month__employ">80% записано</div>
 
                 <ul class="month__day-title">
                   <li>Пн</li>
@@ -433,8 +435,9 @@
 
                   <app-calendar-day v-for="day in month"
                                     :daynum="day.daynum"
-                                    :dayname="day.dayname"
+                                    :monthname="day.monthname"
                                     :progress="day.progress"
+                                    :currentmonth="day.currentmonth"
                                     >
                     </app-calendar-day>
 
@@ -884,7 +887,7 @@
     Vue.component('app-calendar-day',{
       template: `<div class="day" :class="classObj" :style="setBg">
                     <div class="day__num">{{dayNum}}</div>
-                    <div class="day__name">{{dayName}}</div>
+                    <div class="day__name">{{month}}</div>
                     <div class="day__progress">
                       <progress :value="dayProgress" max="100"></progress>
                       <div class="day__progress-bg">
@@ -894,20 +897,44 @@
                     <div class="day__free">Свободно 6ч 30м</div>
 
                   </div>`,
-      props:['daynum','dayname','progress'],
+      props:{
+            daynum:{
+                type: Number,
+                default: 1
+            },
+            monthname:{
+                type: String,
+                default: 'Января'
+            },
+            progress:{
+                type: Number,
+                default: 0
+            }, 
+            currentmonth:{
+                type: Boolean,
+                default: true
+            }
+            },
       data(){
         return {
           dayNum: this.daynum,
-          dayName: this.dayname,
+          month: this.monthname,
           dayProgress: this.progress,
-          textColor: 'rgba(0,0,0, 0.7)'
+          textColor: 'rgba(0,0,0, 0.7)',
+          current: this.currentMonth
         }
       },
       computed: {
         classObj(){
-          if( parseInt(this.progress) == 100){
-             return 'day-full'
-          }
+            let classStr = ''
+            if( this.progress == 100){
+                classStr =  'day-full';
+            }
+            if( !this.currentmonth){
+                classStr = classStr + ' ' + 'is-faded'
+            }
+            console.log(this.current);    
+            return classStr
         },
         setBg(){
           let bg = 'rgba(255, 128, 178, ' + this.dayProgress / 100 + ')';
@@ -928,42 +955,42 @@
       data: {
         accListShow: false,
         month: [
-          {daynum: 25, dayname: 'Февраля', progress: 20},
-          {daynum: 26, dayname: 'Февраля', progress: 10},
-          {daynum: 27, dayname: 'Февраля', progress: 0},
-          {daynum: 28, dayname: 'Февраля', progress: 10},
-          {daynum: 1, dayname: 'Марта', progress: 30},
-          {daynum: 2, dayname: 'Марта', progress: 50},
-          {daynum: 3, dayname: 'Марта', progress: 20},
-          {daynum: 4, dayname: 'Марта', progress: 70},
-          {daynum: 5, dayname: 'Марта', progress: 10},
-          {daynum: 6, dayname: 'Марта', progress: 50},
-          {daynum: 7, dayname: 'Марта', progress: 100},
-          {daynum: 8, dayname: 'Марта', progress: 0},
-          {daynum: 9, dayname: 'Марта', progress: 30},
-          {daynum: 10, dayname: 'Марта', progress: 60},
-          {daynum: 11, dayname: 'Марта', progress: 40},
-          {daynum: 12, dayname: 'Марта', progress: 90},
-          {daynum: 13, dayname: 'Марта', progress: 10},
-          {daynum: 14, dayname: 'Марта', progress: 20},
-          {daynum: 15, dayname: 'Марта', progress: 30},
-          {daynum: 16, dayname: 'Марта', progress: 40},
-          {daynum: 17, dayname: 'Марта', progress: 50},
-          {daynum: 18, dayname: 'Марта', progress: 60},
-          {daynum: 19, dayname: 'Марта', progress: 70},
-          {daynum: 20, dayname: 'Марта', progress: 80},
-          {daynum: 21, dayname: 'Марта', progress: 90},
-          {daynum: 22, dayname: 'Марта', progress: 100},
-          {daynum: 23, dayname: 'Марта', progress: 10},
-          {daynum: 24, dayname: 'Марта', progress: 20},
-          {daynum: 25, dayname: 'Марта', progress: 30},
-          {daynum: 26, dayname: 'Марта', progress: 40},
-          {daynum: 27, dayname: 'Марта', progress: 50},
-          {daynum: 27, dayname: 'Марта', progress: 60},
-          {daynum: 28, dayname: 'Марта', progress: 70},
-          {daynum: 29, dayname: 'Марта', progress: 80},
-          {daynum: 30, dayname: 'Марта', progress: 90},
-          {daynum: 31, dayname: 'Марта', progress: 100},
+          {daynum: 25, monthname: 'Февраля', progress: 20, currentmonth: false},
+          {daynum: 26, monthname: 'Февраля', progress: 10, currentmonth: false},
+          {daynum: 27, monthname: 'Февраля', progress: 0, currentmonth: false},
+          {daynum: 28, monthname: 'Февраля', progress: 10, currentmonth: false},
+          {daynum: 1, monthname: 'Марта', progress: 30},
+          {daynum: 2, monthname: 'Марта', progress: 50},
+          {daynum: 3, monthname: 'Марта', progress: 20},
+          {daynum: 4, monthname: 'Марта', progress: 70},
+          {daynum: 5, monthname: 'Марта', progress: 10},
+          {daynum: 6, monthname: 'Марта', progress: 50},
+          {daynum: 7, monthname: 'Марта', progress: 100},
+          {daynum: 8, monthname: 'Марта', progress: 0},
+          {daynum: 9, monthname: 'Марта', progress: 30},
+          {daynum: 10, monthname: 'Марта', progress: 60},
+          {daynum: 11, monthname: 'Марта', progress: 40},
+          {daynum: 12, monthname: 'Марта', progress: 90},
+          {daynum: 13, monthname: 'Марта', progress: 10},
+          {daynum: 14, monthname: 'Марта', progress: 20},
+          {daynum: 15, monthname: 'Марта', progress: 30},
+          {daynum: 16, monthname: 'Марта', progress: 40},
+          {daynum: 17, monthname: 'Марта', progress: 50},
+          {daynum: 18, monthname: 'Марта', progress: 60},
+          {daynum: 19, monthname: 'Марта', progress: 70},
+          {daynum: 20, monthname: 'Марта', progress: 80},
+          {daynum: 21, monthname: 'Марта', progress: 90},
+          {daynum: 22, monthname: 'Марта', progress: 100},
+          {daynum: 23, monthname: 'Марта', progress: 10},
+          {daynum: 24, monthname: 'Марта', progress: 20},
+          {daynum: 25, monthname: 'Марта', progress: 30},
+          {daynum: 26, monthname: 'Марта', progress: 40},
+          {daynum: 27, monthname: 'Марта', progress: 50},
+          {daynum: 27, monthname: 'Марта', progress: 60},
+          {daynum: 28, monthname: 'Марта', progress: 70},
+          {daynum: 29, monthname: 'Марта', progress: 80},
+          {daynum: 30, monthname: 'Марта', progress: 90},
+          {daynum: 31, monthname: 'Марта', progress: 100},
         ]
       },
       methods: {
