@@ -136,147 +136,155 @@
 			width: $i * 1%
 
 .overlay-day-wizard
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background-color: rgba(#394357, 0.2)
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#394357, 0.2)
 
 .day-wizard
-  position: relative
-  max-width: 657px
-  margin: 0 auto
-  padding-top: 40px
-  padding-bottom: 50px
-  box-shadow: 0 2px 46px rgba(46, 50, 58, 0.11)
-  background-color: #ffffff
-  &__close
-    position: absolute
-    width: 16px
-    height: 16px
-    top: 18px
-    right: 22px
-    svg
-      width: 100%
-      height: 100%
-      fill: rgba(#000000, 0.4)
-    &:hover
-      cursor: pointer
-      svg
-        fill: $activ
-  &__title
-    color: $main
-    font-size: 21px
-    text-transform: uppercase
-    text-align: center
-  &__tabs
-    label
-      display: block
-      color: $main
-      margin-left: 15px
-    input, select
-      width: 209px
-      height: 46px
-      padding: 0 15px
-      margin-top: 10px
-      color: $main
-      box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.13)
-      border: 1px solid rgba($main, 0.25)
-      background-color: #ffffff
-      font-family: 'Oswald'
-      font-size: 18px
-      line-height: 46px
-      appearance: none
-    select
-      background: url('/src/img/arrow-down-min.png')center right 15px no-repeat
+	position: relative
+	max-width: 657px
+	margin: 0 auto
+	padding-top: 40px
+	padding-bottom: 50px
+	box-shadow: 0 2px 46px rgba(46, 50, 58, 0.11)
+	background-color: #ffffff
+	&__close
+		position: absolute
+		width: 16px
+		height: 16px
+		top: 18px
+		right: 22px
+		svg
+			width: 100%
+			height: 100%
+			fill: rgba(#000000, 0.4)
+		&:hover
+			cursor: pointer
+			svg
+				fill: $activ
+	&__title
+		color: $main
+		font-size: 21px
+		text-transform: uppercase
+		text-align: center
+	&__tabs
+	
 
-      
+		
 .tab
-  &__holiday
-    max-width: 462px
-    padding-top: 50px
-    margin: 0 auto
-  &__days
-    display: flex
-    justify-content: center
-    margin-left: -12px
-    flex-wrap: wrap
-  &__day
-    position: relative
-    flex-basis: calc(100% / 4 - 12px)
-    align-self: flex-start
-    text-align: center
-    margin-left: 12px
-    margin-bottom: 11px
-    padding: 10px 8px
-    border-radius: 22px
-    border: 1px solid #ebebeb
-    color: rgba($main, 0.7)
-    transition: all 0.1s
-    &:hover
-      cursor: pointer
-      box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3)
-      transform: translate(-1px, -1px)
-    &-title
-      margin-bottom: 13px
-      color: $main
-      font-size: 22px
-      font-weight: 700
-    &__time
-      margin-top: 8px
-      opacity: 0.67
-      color: $main
-      font-size: 12px
-  &__buttons
-    margin-top: 88px
-    display: flex
-    justify-content: space-between
-  &__workday
-    padding-left: 90px
-    padding-right: 60px
-    padding-top: 50px
-    .add-break
-      width: 210px
-      padding: 14px 0
-      margin-top: 20px
-      margin-right: 60px
-      margin-left: auto
-      text-align: center
-  &__break
-    display: flex
-    margin-top: 21px
-    .tab-time__block:nth-child(2)
-      margin-left: 29px
-    &-del
-      width: 46px
-      height: 46px
-      margin-left: 11px
-      margin-top: auto
-      box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.13)
-      border: 1px solid rgba($main, 0.25)
-      text-align: center
-      line-height: 46px
-      svg
-        width: 16px
-        height: 16px
-        fill: rgba($main, 0.4)
-      &:hover
-        cursor: pointer
-        svg
-          fill: $activ
+	&__holiday
+		max-width: 462px
+		padding-top: 50px
+		margin: 0 auto
+	&__days
+		display: flex
+		justify-content: center
+		margin-left: -12px
+		flex-wrap: wrap
+	&__day
+		position: relative
+		flex-basis: calc(100% / 4 - 12px)
+		align-self: flex-start
+		text-align: center
+		margin-left: 12px
+		margin-bottom: 11px
+		padding: 10px 8px
+		border-radius: 22px
+		border: 1px solid #ebebeb
+		color: rgba($main, 0.7)
+		transition: all 0.1s
+		&:hover
+			cursor: pointer
+			box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.3)
+			transform: translate(-1px, -1px)
+		&-title
+			margin-bottom: 13px
+			color: $main
+			font-size: 22px
+			font-weight: 700
+		&__time
+			margin-top: 8px
+			opacity: 0.67
+			color: $main
+			font-size: 12px
+	&__buttons
+		margin-top: 88px
+		display: flex
+		justify-content: space-between
+	&__workday
+		padding-left: 90px
+		padding-right: 60px
+		padding-top: 50px
+		.add-break
+			width: 210px
+			padding: 14px 0
+			margin-top: 20px
+			margin-right: 60px
+			margin-left: auto
+			text-align: center
+	&__break
+		display: flex
+		margin-top: 20px
+		.time__block:nth-child(2)
+			margin-left: 29px
+		&-del
+			width: 46px
+			height: 46px
+			margin-left: 11px
+			margin-top: auto
+			box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.13)
+			border: 1px solid rgba($main, 0.25)
+			text-align: center
+			line-height: 46px
+			svg
+				width: 16px
+				height: 16px
+				fill: rgba($main, 0.4)
+			&:hover
+				cursor: pointer
+				svg
+					fill: $activ
 
 .workday
-  &__worktime
-    display: flex
-    justify-content: space-between
-    align-items: flex-start
-    max-width: 448px
-    
-  
+	&__worktime
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		max-width: 448px
+	
+.time__block
+	label
+		display: block
+		color: $main
+		margin-left: 15px
+	input, select
+		width: 209px
+		height: 46px
+		padding: 0 15px
+		margin-top: 10px
+		color: $main
+		box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.13)
+		border: 1px solid rgba($main, 0.25)
+		background-color: #ffffff
+		font-family: 'Oswald'
+		font-size: 18px
+		line-height: 46px
+		appearance: none
+	select
+		background: url('/src/img/arrow-down-min.png')center right 15px no-repeat	
 
-    
-     
+.is-workday
+	border: 1px solid $activ
+.is-holiday
+	border: 1px solid $activ
+	background-color: $activ
+	color: #ffffff		
+
+	
+	 
 
 
 .fill-emlpoy-0
