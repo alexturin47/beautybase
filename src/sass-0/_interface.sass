@@ -11,19 +11,18 @@ html, body
 a:active, a:focus
   outline: none
 
-input, textarea, select, button
-  outline: none
-  border: none
+input, textarea, select
+  outline:none !important
 input:active, textarea:active, select:active, input:focus
-  outline: none
+  outline:none
 *:focus
-  outline: none
+  outline:none
 textarea
-  resize: none
+  resize:none
 textarea
-  resize: vertical
+  resize:vertical
 textarea
-  resize: horizontal
+  resize:horizontal
 button:active, button:focus
   outline: none
 button::-moz-focus-inner
@@ -56,13 +55,6 @@ button, select
     background-color: $main
     &:hover
       background-color: darken($main, 5%)
-.btn-bordered
-  color: $main
-  border: 2px solid rgba(#596472, 0.2)
-  background-color: #ffffff
-  &:hover
-    color: $activ
-    border: 2px solid $activ
 .nav-ul
   display: flex
   padding: 0
@@ -75,9 +67,9 @@ button, select
   color: $activ
 
 .open-eye
-  background: url('/img/index/eyeOpen.png') center right no-repeat  
+  background: url('../img/index/eyeOpen.png') center right no-repeat  
 .closed-eye
-  background: url('/img/index/eyeClosed.png') center right no-repeat   
+  background: url('../img/index/eyeClosed.png') center right no-repeat   
 .forms
   &__label
     display: block
@@ -188,9 +180,3 @@ button, select
   opacity: 0
 
 
-.cls-1
-  fill:#ff7bac
-.cls-2
-  fill:#ff80b2
-.cls-3
-  fill:#3a3c4d
