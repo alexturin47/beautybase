@@ -1,0 +1,157 @@
+.editor
+	&__overlay
+		position: fixed
+		display: flex
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		background-color: rgba(#394357, 0.2)
+	&__close-btn
+		position: absolute
+		width: 16px
+		height: 16px
+		top: 18px
+		right: 22px
+		svg
+			width: 16px
+			height: 16px
+			fill: rgba($main,0.6)
+		&:hover
+			cursor: pointer
+			svg
+				fill: $activ
+	&__title
+		color: $main
+		font-size: 21px
+		font-weight: 400
+		text-transform: uppercase
+		text-align: center
+
+.record-window
+	position: relative
+	margin: auto
+	width: 657px
+	height: 672px
+	padding: 40px 90px
+	box-shadow: 0 2px 46px rgba(46, 50, 58, 0.11)
+	background-color: #ffffff
+	.client-block
+		margin-top: 34px
+		display: flex
+		align-items: center
+		&__ava
+			width: 73px
+			text-align: center
+			color: $main
+			font-size: 15px
+			font-weight: 400
+			img
+				display: block
+				width: 73px
+				height: 73px
+				border-radius: 73px
+				vertical-align: middle
+		&__descr
+			margin-left: 25px
+			.descr__name
+				color: $main
+				font-size: 18px
+				font-weight: 400
+			.descr__feed
+				color: rgba($main, 0.5)
+				font-size: 12px
+				font-weight: 400
+	.service-block
+		margin-top: 33px
+		label
+			display: block
+			color: $main
+			font-size: 15px
+			font-weight: 400
+			margin-bottom: 10px
+			margin-left: 14px
+		input
+			height: 46px
+			width: 224px
+			box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.13)
+			border: 1px solid rgba($main, .3)
+			background-color: #ffffff
+			padding: 6px 22px
+			color: $main
+			font-family: 'Oswald'
+			font-size: 18px
+			font-weight: 400
+			line-height: 20px
+
+		.service
+			&__chois
+				display: flex
+				align-items: flex-end
+
+			&__time
+				display: flex
+				margin-left: -29px
+				margin-top: 18px
+				& > div
+					flex-basis: calc(100%/2 - 29px)
+					margin-left: 29px
+					flex-shrink: 0
+				input[type="time"]
+					width: 100%
+				.back-forth-input
+					display: flex
+					justify-content: space-between
+					input
+						display: block
+						width: calc(100% - 100px)
+						text-align: center
+			&__price
+				display: flex
+				margin-left: -29px
+				margin-top: 18px
+				& > div
+					flex-basis: calc(100%/2 - 29px)
+					margin-left: 29px
+					flex-shrink: 0
+				.back-forth-input
+					display: flex
+					justify-content: space-between
+					input
+						display: block
+						width: calc(100% - 100px)
+						text-align: center
+				select
+					position: relative
+					width: 100%
+					height: 46px
+					box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.13)
+					border: 1px solid rgba($main,0.3)
+					background-color: #ffffff
+					appearance: none
+					color: $main
+					padding-left: 20px
+					font-family: 'Oswald'
+					font-size: 18px
+					font-weight: 400
+					background: url('../img/arrow-down-min.png') no-repeat
+					background-position: right 20px top 20px
+					&:hover
+						cursor: pointer
+			&__attention
+				margin-top: 40px
+				color: $main
+				font-size: 15px
+				font-weight: 300
+				text-align: center
+			&__buttons
+				display: flex
+				margin-top: 20px
+				justify-content: space-between
+				.btn
+					margin-left: 0 !important
+				
+	.btn
+		padding: 13px 50px
+		//max-width: 160px
+		margin-left: auto

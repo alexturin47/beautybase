@@ -63,6 +63,26 @@ button, select
   &:hover
     color: $activ
     border: 2px solid $activ
+.btn-rectangle
+	display: inline-block
+	width: 46px
+	height: 46px
+	border: 1px solid rgba($main, .3)
+	background-color: #ffffff
+	color: $main
+	font-family: 'Oswald'
+	font-size: 22px 
+	font-weight: 400
+	text-align: center
+	line-height: 40px
+	&:hover
+		cursor: pointer
+		color: $activ
+
+.back-forth-input
+	input
+		box-shadow: none !important
+
 .nav-ul
   display: flex
   padding: 0
@@ -187,6 +207,17 @@ button, select
   transform: translateY(-10px)
   opacity: 0
 
+.input-wrapper
+	position: relative
+	svg
+		position: absolute
+		top: 15px
+		right: 20px
+		width: 18px
+		height: 18px
+		fill: $main
+.time-picker
+	background: url('../img/index/')
 
 .cls-1
   fill:#ff7bac
@@ -194,3 +225,16 @@ button, select
   fill:#ff80b2
 .cls-3
   fill:#3a3c4d
+
+.stars
+	margin: 0
+	padding: 0
+	display: flex
+	list-style: none
+	li
+		svg
+			width: 16px
+			height: 15px
+			fill: $main
+		&:hover
+			cursor: pointer

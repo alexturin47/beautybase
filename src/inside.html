@@ -281,6 +281,14 @@
 				c7.638-0.913,14.958-2.738,22.397-5.627c7.992-3.122,15.463-7.361,21.941-12.43l0.331,0.294l15.348-15.029
 				C350.631,303.527,350.95,285.795,340.273,275.083z" />
 		</symbol>
+
+		<symbol id="star" viewBox="0 0 55.867 55.867">
+			<path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+			s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+			l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+			c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+			l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+		</symbol>
 	</svg>
 	<!-- /end SVG block -->
 
@@ -703,6 +711,104 @@
 				</div>
 			</footer>
 			<!-- |end footer -->
+
+		<div class="editor__overlay">
+			<div class="record-window">
+				<div class="editor__close-btn" @click="onCloseClick">
+									<svg>
+											<use xlink:href="#close"></use>
+									</svg>
+				</div>
+
+				<div class="editor__title">Записать клиента</div>
+				<div class="client-block">
+					<div class="client-block__ava"><img src="img/inside/acc_ava.png" alt="ava">
+						Клиент
+					</div>
+
+					<div class="client-block__descr">
+						<div class="descr__name">Александра Митрофанова</div>
+						<div class="descr__stars">
+							<ul class="stars">
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+							</ul>
+						</div>
+						<div class="descr__feed">Хороший клиент, но очень хороший</div>
+					</div>
+					<div class="btn btn-bordered">Выбрать</div>
+				</div>
+
+				<div class="service-block">
+					<div class="service__chois">
+						<div>
+							<label>Услуга</label>
+							<input type="text" readonly value="Стрижка плюс укладка">
+						</div>
+						<div class="btn btn-bordered">Выбрать</div>
+					</div>
+
+					<div class="service__time">
+						<div>
+							<label>Время начала</label>
+							<div class="input-wrapper"><input type="text" value="10:00"><svg>
+											<use xlink:href="#calendar"></use>
+									</svg></div>
+						</div>
+						<div>
+							<label>Длительность, минут</label>
+							<div class="back-forth-input">
+								<div class="btn-rectangle">-</div>
+								<input type="text" readonly value="30">
+								<div class="btn-rectangle">+</div>
+							</div>							
+						</div>
+					</div>
+
+					<div class="service__price">
+						<div>
+							<label>Цена</label>
+							<div class="back-forth-input">
+								<div class="btn-rectangle">-</div>
+								<input type="text" readonly value="5600">
+								<div class="btn-rectangle">+</div>
+							</div>
+						</div>
+						<div>
+							<label>Акции</label>
+							<select>
+								<option value="30">30 минут</option>
+								<option value="60">60 минут</option>
+								<option value="90">90 минут</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="service__attention">Подтвердите или отмените данные заказа</div>
+
+					<div class="service__buttons">
+						<div class="btn btn-bordered">отменить запись</div>
+						<div class="btn btn-fill">подтвердить запись</div>
+					</div>
+
+				</div>
+				
+			</div>
+		</div>
+
 		</main>
 	</div>
 
