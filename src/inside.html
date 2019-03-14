@@ -12,6 +12,12 @@
 
 <body class="body-insidepage">
 	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+		<symbol id="search" viewBox="0 0 52.966 52.966">
+				<path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+				c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
+				C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
+				S32.459,40,21.983,40z"/>
+		</symbol>
 		<symbol id="facebook" viewBox="0 0 310 310">
 			<path d="M81.703,165.106h33.981V305c0,2.762,2.238,5,5,5h57.616c2.762,0,5-2.238,5-5V165.765h39.064
 		    c2.54,0,4.677-1.906,4.967-4.429l5.933-51.502c0.163-1.417-0.286-2.836-1.234-3.899c-0.949-1.064-2.307-1.673-3.732-1.673h-44.996
@@ -712,15 +718,15 @@
 			</footer>
 			<!-- |end footer -->
 
-		<div class="editor__overlay">
+		<div class="modal record-modal" style="display: none;">
 			<div class="record-window">
-				<div class="editor__close-btn" @click="onCloseClick">
+				<div class="close-btn" @click="onCloseClick">
 									<svg>
 											<use xlink:href="#close"></use>
 									</svg>
 				</div>
 
-				<div class="editor__title">Записать клиента</div>
+				<div class="record-window__title">Записать клиента</div>
 				<div class="client-block">
 					<div class="client-block__ava"><img src="img/inside/acc_ava.png" alt="ava">
 						Клиент
@@ -806,6 +812,258 @@
 
 				</div>
 				
+			</div>
+		</div>
+
+		<div class="modal clients-modal" style="display: none;">
+			<div class="clients-chois">
+				<div class="close-btn" @click="onCloseClick">
+					<svg>
+						<use xlink:href="#close"></use>
+					</svg>
+				</div>
+
+				<div class="clients-chois__title">выбор клиента</div>
+				<div class="input-wrapper">
+					<input type="text" placeholder="Введите имя клиента"><svg>
+													<use xlink:href="#search"></use>
+												</svg>
+				</div>
+				<div class="clients__list">
+					<div class="client-card">
+						<div class="client-card__ava"><img src="img/inside/avatar_client.png" alt="client foto"></div>
+						<div class="client-card__descr">
+							<div class="client-card__name">Светлана Иванова</div>
+							<div class="descr__stars">
+								<ul class="stars star-3">
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+								</ul>
+							</div>							
+						</div>
+						<div class="btn btn-bordered">выбрать</div>
+					</div>
+					<div class="client-card">
+						<div class="client-card__ava"><img class="" src="img/inside/client1.jpg" alt="client foto"></div>
+						<div class="client-card__descr">
+							<div class="client-card__name">Вероника Сидорова</div>
+							<div class="descr__stars">
+								<ul class="stars star-5">
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+								</ul>
+							</div>							
+						</div>
+						<div class="btn btn-bordered">выбрать</div>
+					</div>
+					<div class="client-card">
+						<div class="client-card__ava"><img src="img/inside/client2.jpg" alt="client foto"></div>
+						<div class="client-card__descr">
+							<div class="client-card__name">Юлия Скворцова</div>
+							<div class="descr__stars">
+								<ul class="stars star-2">
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+								</ul>
+							</div>							
+						</div>
+						<div class="btn btn-bordered">выбрать</div>
+					</div>
+					<div class="client-card client-chois">
+						<div class="client-card__ava"><img src="img/inside/client3.jpg" alt="client foto"></div>
+						<div class="client-card__descr">
+							<div class="client-card__name">Наталья Семенова</div>
+							<div class="descr__stars">
+								<ul class="stars star-4">
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+								</ul>
+							</div>							
+						</div>
+						<div class="btn btn-bordered">выбрать</div>
+					</div>
+					<div class="client-card">
+						<div class="client-card__ava"><img src="img/inside/client4.jpg" alt="client foto"></div>
+						<div class="client-card__descr">
+							<div class="client-card__name">Александра Никифорова</div>
+							<div class="descr__stars star-1">
+								<ul class="stars">
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+								</ul>
+							</div>							
+						</div>
+						<div class="btn btn-bordered">выбрать</div>
+					</div>
+					<div class="client-card">
+						<div class="client-card__ava"><img src="img/inside/client5.jpg" alt="client foto"></div>
+						<div class="client-card__descr">
+							<div class="client-card__name">Светлана Николаева</div>
+							<div class="descr__stars">
+								<ul class="stars">
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+									<li><svg>
+											<use xlink:href="#star"></use>
+										</svg></li>
+								</ul>
+							</div>							
+						</div>
+						<div class="btn btn-bordered">выбрать</div>
+					</div>
+				</div>
+				<div class="clients__btn">
+					<div class="btn btn-bordered">Отменить</div>
+					<div class="btn btn-fill">Готово</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal service-modal">
+			<div class="service-chois">
+				<div class="close-btn" @click="onCloseClick">
+					<svg>
+						<use xlink:href="#close"></use>
+					</svg>
+				</div>
+				
+				<div class="service-chois__title">выбрать  услуги</div>
+
+				<div class="service-chois__select">
+					<label>Услуга</label>
+					<select>
+						<option value="1">Прическа</option>
+						<option value="2">Стрижка</option>
+						<option value="3">Укадка</option>
+						<option value="4">Завивка</option>
+					</select>
+				</div>
+
+				<div class="additional">
+					<label>Дополнительные услуги</label>
+					<div class="additional__wrapper">
+						<div>
+							<div class="card__check" id="app-check">
+                <input type="checkbox" v-model="checked">
+                <label @click="checked=!checked">Доп.услуга 1</label>
+								<label>+500р.</label>
+              </div>
+							<div class="card__check" id="app-check">
+                <input type="checkbox" v-model="checked">
+                <label @click="checked=!checked">Доп.услуга 2</label>
+								<label>+500р.</label>
+              </div>
+							<div class="card__check" id="app-check">
+                <input type="checkbox" v-model="checked">
+                <label @click="checked=!checked">Доп.услуга 3</label>
+								<label>+500р.</label>
+              </div>
+						</div>
+
+						<div>
+							<div class="card__check" id="app-check">
+                <input type="checkbox" v-model="checked">
+                <label @click="checked=!checked">Доп.услуга 1</label>
+								<label>+500р.</label>
+              </div>
+							<div class="card__check" id="app-check">
+                <input type="checkbox" v-model="checked">
+                <label @click="checked=!checked">Доп.услуга 2</label>
+								<label>+500р.</label>
+              </div>
+							<div class="card__check" id="app-check">
+                <input type="checkbox" v-model="checked">
+                <label @click="checked=!checked">Доп.услуга 3</label>
+								<label>+500р.</label>
+              </div>
+						</div>
+					</div>
+				</div>
+
+				<div class="service__cost">
+						<span>3800</span>
+						<div class="service__cost-discont">скидка - 10% (380 р)</div>
+				</div>
+
+				<div class="service__btn">
+					<div class="btn btn-bordered">Отменить</div>
+					<div class="btn btn-fill">Выбрать</div>
+				</div>
 			</div>
 		</div>
 
