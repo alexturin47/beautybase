@@ -188,7 +188,8 @@
 		margin-top: 30px
 		border-top: 1px solid rgba($main, .2)
 		border-bottom: 1px solid rgba($main, .2)
-		//overflow-y: scroll
+		max-height: 390px
+		overflow-y: scroll
 		.client-card
 			position: relative
 			display: flex
@@ -303,6 +304,7 @@
 					flex-basis: 50%
 					margin-top: 15px
 				.card__check
+					margin-bottom: 6px
 					label
 						display: inline-block
 						font-size: 18px
@@ -313,10 +315,25 @@
 							color: $activ
 							font-size: 18px
 							font-weight: 400
+	
+	&__cost
+		margin-top: 36px
+		color: $main
+		font-size: 18px
+		font-weight: 400
+		text-align: center
+		span
+			font-size: 33px
+			color: $activ
+			line-height: 33px
+
+	&__btn
+		margin-top: 38px
+		display: flex
+		justify-content: center
+		.btn:last-child
+			margin-left: 30px
 				
-
-
-
 
 .close-btn
 	position: absolute

@@ -2652,6 +2652,8 @@ footer p {
   margin-top: 30px;
   border-top: 1px solid rgba(101, 107, 114, 0.2);
   border-bottom: 1px solid rgba(101, 107, 114, 0.2);
+  max-height: 390px;
+  overflow-y: scroll;
 }
 
 .clients__list .client-card {
@@ -2809,6 +2811,10 @@ footer p {
   margin-top: 15px;
 }
 
+.service-chois .additional__wrapper .card__check {
+  margin-bottom: 6px;
+}
+
 .service-chois .additional__wrapper .card__check label {
   display: inline-block;
   font-size: 18px;
@@ -2821,6 +2827,34 @@ footer p {
   color: #ff80b2;
   font-size: 18px;
   font-weight: 400;
+}
+
+.service__cost {
+  margin-top: 36px;
+  color: #656b72;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.service__cost span {
+  font-size: 33px;
+  color: #ff80b2;
+  line-height: 33px;
+}
+
+.service__btn {
+  margin-top: 38px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.service__btn .btn:last-child {
+  margin-left: 30px;
 }
 
 .close-btn {

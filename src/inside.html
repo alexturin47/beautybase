@@ -815,7 +815,7 @@
 			</div>
 		</div>
 
-		<div class="modal clients-modal" style="display: none;">
+		<div class="modal clients-modal">
 			<div class="clients-chois">
 				<div class="close-btn" @click="onCloseClick">
 					<svg>
@@ -994,7 +994,7 @@
 			</div>
 		</div>
 
-		<div class="modal service-modal">
+		<div class="modal service-modal"  style="display: none;">
 			<div class="service-chois">
 				<div class="close-btn" @click="onCloseClick">
 					<svg>
@@ -1033,31 +1033,19 @@
                 <label @click="checked=!checked">Доп.услуга 3</label>
 								<label>+500р.</label>
               </div>
-						</div>
-
-						<div>
-							<div class="card__check" id="app-check">
-                <input type="checkbox" v-model="checked">
-                <label @click="checked=!checked">Доп.услуга 1</label>
-								<label>+500р.</label>
-              </div>
-							<div class="card__check" id="app-check">
-                <input type="checkbox" v-model="checked">
-                <label @click="checked=!checked">Доп.услуга 2</label>
-								<label>+500р.</label>
-              </div>
 							<div class="card__check" id="app-check">
                 <input type="checkbox" v-model="checked">
                 <label @click="checked=!checked">Доп.услуга 3</label>
 								<label>+500р.</label>
               </div>
 						</div>
+
 					</div>
 				</div>
 
 				<div class="service__cost">
 						<span>3800</span>
-						<div class="service__cost-discont">скидка - 10% (380 р)</div>
+						<div class="service__cost-discount">скидка - 10% (380 р)</div>
 				</div>
 
 				<div class="service__btn">
@@ -1073,26 +1061,7 @@
 
 	<script src="js/vue.js"></script>
 	<script src="js/calendar.js"></script>
-	<!-- <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      //
-      //  обработка нестандартных чекбоксов
-      //
-      let checkLabel = document.querySelectorAll('.card__check > label');
 
-      checkLabel.forEach(el => {
-        el.addEventListener('click', () => {
-          let box = el.previousElementSibling;
-          if (box.hasAttribute('checked')) {
-            box.removeAttribute('checked');
-          } else {
-            box.setAttribute('checked', 'true');
-          }
-
-        })
-      });
-    });
-  </script> -->
 
 	<script>
 
