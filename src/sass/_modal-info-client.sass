@@ -2,8 +2,7 @@
 	position: relative
 	margin: auto
 	width: 657px
-	height: 672px
-	padding: 40px 90px
+	//height: 672px
 	box-shadow: 0 2px 46px rgba(46, 50, 58, 0.11)
 	background-color: #ffffff
 	&__title
@@ -12,3 +11,101 @@
 		font-weight: 400
 		text-transform: uppercase
 		text-align: center
+	&__top
+		padding: 40px 90px
+	&__footer
+		margin-top: 24px
+		padding: 33px 46px
+		display: flex
+		justify-content: space-between
+		background-color: rgba($main, 0.05)
+		.btn
+			padding: 0
+			width: 180px
+			height: 36px
+			border-radius: 36px
+			color: $main
+			font-family: "Oswald-SemiBold"
+			font-size: 10px
+			font-weight: 400
+			line-height: 34px
+			text-transform: uppercase
+			text-align: center
+			svg
+				width: 16px
+				height: 21px
+				margin-right: 7px
+				margin-top: -2px
+				fill: $main
+				vertical-align: middle
+			span
+				line-height: 21px
+			&:hover
+				svg
+					fill: $activ
+
+
+.info-client
+
+	&__body
+		margin-top: 30px
+		display: flex
+		flex-basis: 73px
+		flex-shrink: 0
+
+	&__img
+		width: 73px
+
+		img
+			display: block
+			width: 73px
+			height: 73px
+			border-radius: 73px
+			overflow: hidden
+
+		span
+			display: block
+			margin: 5px auto
+			color: $main
+			font-size: 15px
+			font-weight: 400
+			text-align: center
+
+	&__text
+		margin-left: 25px
+		padding-top: 23px
+		color: $main
+		font-family: 'Oswald'
+		font-size: 18px
+		font-weight: 400
+
+	&__stars
+		line-height: 14px
+
+	&__together
+		margin-top: 8px
+		color: $activ
+		font-size: 12px
+
+	&__comment
+		margin-top: 28px
+		span		
+			opacity: 0.51
+			font-size: 12px
+		p
+			margin-top: 6px
+			margin-bottom: 6px
+			font-size: 12px
+			line-height: 18.93px
+	
+	&__client-descr
+		margin-top: 24px
+		color: $main
+		font-size: 15px
+		border-collapse: collapse
+		tr
+			td:first-child
+				opacity: 0.59
+			td:last-child
+				padding-left: 28px
+		
