@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -299,436 +299,75 @@
 	<!-- /end SVG block -->
 
 	<div id="app">
-		<main class="inside">
-			<header>
-				<div class="container inside__header">
-					<a href="index.html" class="inside__header__logo">
-						<svg>
-							<use xlink:href="#logo"></use>
-						</svg>
-					</a>
-					<ul class="inside__header__nav nav-ul">
-						<li><a href="shedule.html">Расписание</a></li>
-						<li><a href="clients.html">Клиенты</a></li>
-						<li><a href="services.html">Услуги</a></li>
-						<li><a href="feedbacks.html">Отзывы</a></li>
-						<li><a href="articles.html">Статьи</a></li>
-					</ul>
-					<div class="inside__header__account">
-						<div class="account__text">
-							<div class="account__name">Светлана Иванова</div>
-							<div class="account__title">Мастер</div>
-						</div>
-						<div class="account__img" @click="accListShow = !accListShow">
-							<img src="./img/inside/acc_ava.png" alt="Avatar">
-						</div>
-						<div class="account__arrow" :class="{ 'is-open': accListShow}"
-							@click="accListShow = !accListShow">
-							<svg>
-								<use xlink:href="#left"></use>
-							</svg>
-						</div>
-						<transition name="slide-fade">
-							<div class="account__list" v-show="accListShow">
-								<ul>
-									<li><a href="$"><svg>
-												<use xlink:href="#user"></use>
-											</svg><span>Личный кабинет</span></a></li>
-									<li><a href="#"><svg>
-												<use xlink:href="#users"></use>
-											</svg><span>Клиенты</span></a></li>
-									<li><a href="#"><svg>
-												<use xlink:href="#notes"></use>
-											</svg><span>Записи</span></a></li>
-									<li><a href="#"><svg>
-												<use xlink:href="#exit"></use>
-											</svg><span>Выход</span></a></li>
-								</ul>
-							</div>
-						</transition>
-					</div>
+	
+	
+	
+		<div class="modal info-client">
+			<div class="window-info-client">
+				<div class="close-btn" @click="onCloseClick">
+									<svg>
+											<use xlink:href="#close"></use>
+									</svg>
 				</div>
-			</header>
-			<!--/header  -->
+				<div class="window-info-client__title">Сведения о клиенте</div>
+				<div class="info-client__head">
 
-			<div class="filter-bar">
-				<div class="container">
-					<div class="filters">
-
-						<div class="filters__block block-date">
-							<div class="filters__block-title">Дата</div>
-
-							<app-calendar></app-calendar>
-
-							<!-- <div class="filters__block-control">
-                  <div class="filters__btn arrow-left"><svg>
-                    <use xlink:href="#left"></use>
-                  </svg></div>
-                <div class="filters__input input-date">
-                  <input type="text" v-model="today" id="inputCal">
-                  <div class="filters__input-img" id="calBtn" @click="calendar">
-                    <svg>
-                      <use xlink:href="#calendar"></use>
-                    </svg></div>
-                </div>
-                <div class="filters__btn arrow-right"><svg>
-                    <use xlink:href="#left"></use>
-                  </svg></div>
-                </div> -->
-						</div>
-
-						<div class="filters__block block-time_from" style="display: none;">
-							<div class="filters__block-title">Время С</div>
-							<div class="filters__block-control">
-								<div class="filters__input input-time">
-									<input type="text" placeholder="8:00">
-									<div class="filters__input-img"><svg>
-											<use xlink:href="#clock"></use>
-										</svg></div>
-								</div>
-							</div>
-						</div>
-						<div class="filters__block block-time_to" style="display: none;">
-							<div class="filters__block-title">Время По</div>
-							<div class="filters__block-control">
-								<div class="filters__input input-time">
-									<input type="text" placeholder="12:00">
-									<div class="filters__input-img"><svg>
-											<use xlink:href="#clock"></use>
-										</svg></div>
-								</div>
-							</div>
-						</div>
-						<div class="filters__block block-time_period" style="display: none;">
-							<div class="filters__block-title">Период</div>
-							<div class="filters__block-control">
-								<div class="filters__input input-period">
-									<select>
-										<option>30 мин</option>
-										<option>40 мин</option>
-										<option>60 мин</option>
-									</select>
-									<div class="filters__input-img"><svg>
-											<use xlink:href="#left"></use>
-										</svg></div>
-								</div>
-							</div>
-						</div>
+					<div class="info-client__img">
+						<img src="img/inside/client1.jpg">
+						<span>Клиент</span>
 					</div>
+
+						<div class="info-client__name">Светлана Иванова, Москва</div>
+						<div class="info-client__stars">
+							<ul class="stars">
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+								<li><svg>
+										<use xlink:href="#star"></use>
+									</svg></li>
+							</ul>
+						</div>
+						<div class="info-client__together">Мы вместе уже 5 лет, 7 месяцев</div>
+						<div class="info-client__date">28.01.2018</div>
+						<div class="info-client__comment">Работали с этим клиентом, все прошло хорошо. Надеюсь на продолжение сотрудничества.</div>
+
+							<table class="info-client__client-descr">
+								<tbody>
+									<tr>
+										<td>Возраст:</td><td>35 лет</td>
+									</tr>
+									<tr>
+										<td>Цвет волос:</td><td>Темный</td>
+									</tr>
+									<tr>
+										<td>Последнее посещение:</td><td>28.01.2018</td>
+									</tr>
+								</tbody>
+							</table>
+		
+				</div>
+				<div class="window-info-client__footer">
+					<div class="btn btn-bordered">История посещений</div>
+					<div class="btn btn-bordered">профиль клиента</div>
+					<div class="btn btn-bordered">Заметки</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="mainblock">
-				<div class="container">
-
-					<div class="mainblock__wrapper">
-						<!--  сайдба меню  -->
-
-						<sidebarnav></sidebarnav>
-						<!-- <div class="sidebar">
-            <ul>
-              <li v-for="(row, index) in navRow"
-                :class="{ 'sidebar-active': row.isActive }" 
-                @click="setRow(index)">
-                {{ row.text }}</li>
-              <li>Ближайшие 10 свободных мест</li>
-              <li>Пункт 1</li>
-              <li>Пункт 2</li>
-            </ul>
-          </div> -->
-						<!-- / конец сайдбар меню -->
-
-						<!-- блок расписание -->
-						<div class="shedule">
-							<div class="timeline">
-								<ul>
-									<li>8:00</li>
-									<li>9:00</li>
-									<li>10:00</li>
-									<li>11:00</li>
-									<li>12:00</li>
-									<li>13:00</li>
-									<li>14:00</li>
-									<li>15:00</li>
-									<li>16:00</li>
-									<li>17:00</li>
-									<li>18:00</li>
-									<li>19:00</li>
-									<li>20:00</li>
-									<li>21:00</li>
-									<li>22:00</li>
-								</ul>
-							</div>
-
-							<div class="shedule-cards">
-
-								<div class="shedule-cards__card" data-height="" style="height: 117px;">
-									<div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara">
-									</div>
-									<div class="card__text">
-										<div class="card__time activ-time">8:00 - 9:00</div>
-										<div class="card__client">Елена Иванова <span>+ 7 495 123 456 34</span></div>
-										<div class="card__service">Стрижка</div>
-									</div>
-									<div class="card__price">
-										<span>4500p.</span>
-										<app-checkbox v-show="false"></app-checkbox>
-										<!-- <div class="card__check" style="display:none;">
-                    <input type="checkbox">
-                    <label>Горящее место</label>
-                  </div> -->
-									</div>
-									<div class="card__buttons">
-										<div class="buttons__block">
-											<div><svg>
-													<use xlink:href="#call"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#pencil"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#close"></use>
-												</svg></div>
-										</div>
-										<input type="button" value="Записать" class="card__btn" style="display:none;">
-									</div>
-								</div>
-
-								<div class="shedule-cards__card" data-height="" style="height: 117px;">
-									<div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara"
-											style="display:none;">
-									</div>
-									<div class="card__text">
-										<div class="card__time activ-time">9:00 - 10:30</div>
-										<div class="card__client" style="display:none;">Елена Иванова <span>+ 7 495 123
-												456 34</span></div>
-										<div class="card__service">Свободно</div>
-									</div>
-									<div class="card__price">
-										<span style="display:none;">4500p.</span>
-										<app-checkbox></app-checkbox>
-										<!-- <div class="card__check">
-                    <input type="checkbox">
-                    <label>Горящее место</label>
-                  </div> -->
-									</div>
-									<div class="card__buttons">
-										<div class="buttons__block" style="display:none;">
-											<div><svg>
-													<use xlink:href="#call"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#pencil"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#close"></use>
-												</svg></div>
-										</div>
-										<input type="button" value="Записать" class="card__btn">
-									</div>
-
-								</div>
-
-								<div class="shedule-cards__card" data-height="" style="height: 78px;">
-									<div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara"
-											style="display:none;">
-									</div>
-									<div class="card__text">
-										<div class="card__time activ-time">10:30 - 11:30</div>
-										<div class="card__client" style="display:none;">Елена Иванова <span>+ 7 495 123
-												456 34</span></div>
-										<div class="card__service">Перерыв</div>
-									</div>
-									<div class="card__price">
-										<span style="display:none;">4500p.</span>
-										<app-checkbox v-show="false"></app-checkbox>
-										<!-- <div class="card__check" style="display:none;">
-                    <input type="checkbox">
-                    <label>Горящее место</label>
-                  </div> -->
-									</div>
-									<div class="card__buttons">
-										<div class="buttons__block" style="display:none;">
-											<div><svg>
-													<use xlink:href="#call"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#pencil"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#close"></use>
-												</svg></div>
-										</div>
-										<input type="button" value="Записать" class="card__btn" style="display:none;">
-									</div>
-
-								</div>
-
-								<div class="shedule-cards__card" data-height="" style="height: 156px;">
-									<div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara">
-									</div>
-									<div class="card__text">
-										<div class="card__time activ-time">11:30 - 13:30</div>
-										<div class="card__client">Елена Иванова <span>+ 7 495 123 456 34</span></div>
-										<div class="card__service">Укладка</div>
-									</div>
-									<div class="card__price">
-										<span>4500p.</span>
-										<app-checkbox v-show="false"></app-checkbox>
-										<!-- <div class="card__check" style="display:none;">
-                    <input type="checkbox">
-                    <label>Горящее место</label>
-                  </div> -->
-									</div>
-									<div class="card__buttons">
-										<div class="buttons__block">
-											<div><svg>
-													<use xlink:href="#call"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#pencil"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#close"></use>
-												</svg></div>
-										</div>
-										<input type="button" value="Записать" class="card__btn" style="display:none;">
-									</div>
-								</div>
-
-								<div class="shedule-cards__card" data-height="" style="height: 195px;">
-									<div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara">
-									</div>
-									<div class="card__text">
-										<div class="card__time activ-time">13:30 - 16:00</div>
-										<div class="card__client">Елена Иванова <span>+ 7 495 123 456 34</span></div>
-										<div class="card__service">Стрижка</div>
-									</div>
-									<div class="card__price">
-										<span>4500p.</span>
-										<app-checkbox v-show="false"></app-checkbox>
-										<!-- <div class="card__check" style="display:none;">
-                    <input type="checkbox">
-                    <label>Горящее место</label>
-                  </div> -->
-									</div>
-									<div class="card__buttons">
-										<div class="buttons__block">
-											<div><svg>
-													<use xlink:href="#call"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#pencil"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#close"></use>
-												</svg></div>
-										</div>
-										<input type="button" value="Записать" class="card__btn" style="display:none;">
-									</div>
-								</div>
-
-								<div class="shedule-cards__card" data-height="" style="height: 117px;">
-									<div class="card__img"><img src="./img/inside/avatar_client.png" alt="avatara"
-											style="display:none;">
-									</div>
-									<div class="card__text">
-										<div class="card__time activ-time">16:00 - 17:30</div>
-										<div class="card__client" style="display:none;">Елена Иванова <span>+ 7 495 123
-												456 34</span></div>
-										<div class="card__service">Свободно</div>
-									</div>
-									<div class="card__price">
-										<span style="display:none;">4500p.</span>
-										<app-checkbox></app-checkbox>
-										<!-- <div class="card__check" id="app-check">
-                    <input type="checkbox" v-model="checked">
-                    <label @click="checked=!checked">Горящее место</label>
-                  </div> -->
-									</div>
-									<div class="card__buttons">
-										<div class="buttons__block" style="display:none;">
-											<div><svg>
-													<use xlink:href="#call"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#pencil"></use>
-												</svg></div>
-											<div><svg>
-													<use xlink:href="#close"></use>
-												</svg></div>
-										</div>
-										<input type="button" value="Записать" class="card__btn">
-									</div>
-
-								</div>
-
-							</div>
-						</div>
-						<!--  конец блока расписания -->
-					</div>
-
-				</div>
-			</div>
-
-			<footer>
-				<div class="container footer">
-					<div class="footer__block big-block">
-						<p class="footer__copyright">© 1997–2019 Beauty Base</p>
-						<p class="footer__regaddress">Россия, Москва, 117997, ул. Вавилова 19. Генеральная лицензия на
-							осуществление
-							деятельности от 11 августа 2015 года. Регистрационный номер — 1481.</p>
-						<ul class="footer__social nav-ul">
-							<li><a class="social__icon" href="facebook.com"><svg>
-										<use xlink:href="#facebook"></use>
-									</svg></a></li>
-							<li><a class="social__icon" href="twitter.com"><svg>
-										<use xlink:href="#twitter"></use>
-									</svg></a></li>
-							<li><a class="social__icon" href="vk.ru"><svg>
-										<use xlink:href="#vk"></use>
-									</svg></a></li>
-							<li><a class="social__icon" href="googleplus.com"><svg>
-										<use xlink:href="#googleplus"></use>
-									</svg></a></li>
-							<li><a class="social__icon" href="instagramm.com"><svg>
-										<use xlink:href="#instagram"></use>
-									</svg></a></li>
-						</ul>
-					</div>
-					<div class="footer__block footer__links">
-						<a href="faq.html">Как это работает?</a>
-						<p>Правила и полезные ссылки о сервисе</p>
-					</div>
-					<div class="footer__block footer__links">
-						<a href="rules.html">Правила сервиса</a>
-						<p>Правила и полезные ссылки о сервисе</p>
-					</div>
-					<div class="footer__block footer__contact">
-						<div class="footer__contact-title">
-							<svg>
-								<use xlink:href="#phone"></use>
-							</svg>
-							<span>Контактный центр</span>
-						</div>
-						<a href="tel:+788881234567" class="footer__contact-phone">+ 7 8 888 123 45 67</a>
-						<a href="email:mail@mail.ru" class="footer__contact-mail">mail@mail.ru</a>
-					</div>
-				</div>
-			</footer>
-			<!-- |end footer -->
-
-
-
-
-
-		</main>
 	</div>
 
 
 	<script src="js/vue.js"></script>
-	<script src="js/calendar.js"></script>
-
 
 	<script>
 
