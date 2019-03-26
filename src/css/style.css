@@ -566,7 +566,8 @@ header {
 .offer__title {
   margin: 0;
   color: #3a3c4d;
-  font-family: "Oswald-SemiBold";
+  font-family: "Oswald";
+  font-weight: 600;
   font-size: 49px;
   line-height: 58px;
   text-transform: uppercase;
@@ -655,7 +656,8 @@ footer p {
 
 .footer__copyright {
   color: #ffffff;
-  font-family: "Oswald-ExtraLight";
+  font-family: "Oswald";
+  font-weight: 300;
   font-size: 17px;
 }
 
@@ -716,7 +718,8 @@ footer p {
 }
 
 .footer__links p {
-  font-family: "Oswald-ExtraLight";
+  font-family: "Oswald";
+  font-weight: 300;
   font-size: 17px;
 }
 
@@ -827,7 +830,8 @@ footer p {
 
 .reg__form-text {
   color: #656b72;
-  font-family: "Oswald-ExtraLight";
+  font-family: "Oswald";
+  font-weight: 300;
   font-size: 14px;
   line-height: 23.04px;
 }
